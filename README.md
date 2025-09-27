@@ -6,7 +6,7 @@ A app that turns a pickup/dropoff route into driver predicted ELD‑style daily 
 - Backend: Django 5, simple endpoint for planning and logs
 - Maps: Mapbox GL JS (frontend) and Mapbox Directions (backend)
 
-This README explains how it works end‑to‑end, how to run it locally, and where key pieces live.
+This README explains how it works end‑to‑end
 
 ## Technical overview 
 
@@ -27,7 +27,7 @@ Key pieces and how they fit together:
   - API wrapper (`app/lib/api.ts`) calls `/api/plan-route/` and handles CSRF.
   - Env: `VITE_MAPBOX_TOKEN` enables geocoding and map tiles on the client.
 
-- Server (Django) - [edl-backend](https://github.com/AbogeJr/edl-backend)
+- [Server (Django)](https://github.com/AbogeJr/edl-backend)
   - Endpoint (`logs/views.py`): `/api/plan-route/` accepts waypoints and orchestrates directions + planning.
   - Directions (`logs/mapbox.py`): small stdlib client to Mapbox Directions; token via `MAPBOX_TOKEN`.
   - Planner (`logs/planner.py`): pure function that models pickup/drive/break/drop‑off and splits across days for rendering.
