@@ -36,3 +36,5 @@ Key pieces and how they fit together:
 - Data contract
   - Request: `{ waypoints: [{lat,lng}, ...], avg_mph?, start_ts? }`
   - Response: `{ route: {distance_m, duration_s, geometry}, segments: Absolute[], days: [{date, segments: MinuteOffsets[]}] }`
+
+![Screenshot](./public/image.png)
